@@ -1,0 +1,19 @@
+{
+
+			"name": "aplicationOne",
+			"version": "0.0.1",
+			"private": "true",
+			"author": "Gonzalo Jordan",
+			"dependencies":
+			{
+        		 "express" : "3.3.x",
+        		 "mongoose" : "3.6.x",
+        		 "socket.io": "1.2.1"
+   
+
+    }
+   
+
+
+
+}
