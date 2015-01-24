@@ -6,6 +6,13 @@ var express = require("express"),
     server  = http.createServer(app),
     port = process.env.PORT || 8000
 
+app.configure(function () {
+  app.use(express.bodyParser()); 
+  app.use(express.methodOverride());
+  app.use(app.router); 
+});
+
+app.use('/files/files', express.static(__dirname + '/files/files'));
 
  app.get('/', function(req, res) {
           //console.log(req.url);  actual direction
@@ -15,7 +22,7 @@ var express = require("express"),
       
       });
       
- app.use('/files/files', express.static(__dirname + '/files/files'));
+ 
      
 console.log(port);
 server.listen(port, function(err) {
