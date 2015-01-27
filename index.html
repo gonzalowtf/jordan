@@ -43,11 +43,23 @@
 	}	
   
 	.nav{
-        float:right;
-        width: 55%;
+        position: absolute;
+        left:30%;
+
+        width: 60%;
         height: 10%;
+        float: left;
 
 	}
+  .carrusel{
+        
+       width: 60%;
+       height:70%; 
+       position: absolute;
+       left:30%;
+       top:19%; 
+
+  }
 
 	</style>
 </head>
@@ -71,6 +83,15 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
+            <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Seguime!<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+            <li><a href="#" onClick = "facebook()">Facebook</a></li>
+            <li><a href="#" onClick ="twitter()">Twitter</a></li>
+            <li><a href="#" onClick = "google +">Google +</a></li>
+          </ul>
+
+        </li>
         <li class="active"><a href="#">Biografia <span class="sr-only">(current)</span></a></li>
         <li><a href="#">Contacto</a></li>
         <li class="dropdown">
@@ -85,6 +106,7 @@
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
+    
         
       </ul>
       
@@ -165,6 +187,22 @@
     </div><!-- /.carousel -->
     </div>
 
-	
+<script>
+  function show(){
+    bootbox.alert("Button to an action !");
+  }
+  function facebook(){
+    bootbox.alert("Link to the Facebook´s page"); 
+  }
+  function twitter(){
+    bootbox.alert("Link to the Twitter´s page"); 
+  }
+  function google(){
+    bootbox.alert("Link to the Google+´s page"); 
+  }
+  function prog(){
+    bootbox.alert("Link to the Programmer´s  page"); 
+  }
+</script>	
 </body>
 </html>
