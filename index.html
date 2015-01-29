@@ -21,47 +21,67 @@
     <script type="text/javascript" src = "files/files/bootbox.min.js"></script>
 	<title>Gustavo Jordan</title>
 	<style>
-
-	@font-face{
-      font-family: "bold";
+  @font-face{
+      font-family: "bolder";
       src:url(files/files/GreyscaleBasic/bold.ttf);
     }
-    
+    @font-face{
+    font-family: "dust";
+    src:url(files/files/dustwest.ttf);
+  }
 
-	body{
-		background-color: white;
-		}
+  body{
+    background-color: white;
+    }
 
-	.header{
-		font-size: 30%;
-		font-family: bold;
+  .header{
+    font-size: 40%;
+    font-family: bolder;
     height:auto;
-		width: 20%;
-    float : left;
-		
-		color: white;
-	}	
+    width: 20%;
+    position: absolute;
+    left:2.6%;    
+    color: white;
+  } 
   
-	.nav{
+  .nav{
         position: absolute;
-        left:30%;
-
-        width: 60%;
+        left:24%;
+        width: 70%;
         height: 10%;
         float: left;
 
-	}
+  }
   .carrusel{
         
-       width: 60%;
+       width: 70%;
        height:70%; 
        position: absolute;
-       left:30%;
-       top:19%; 
+       left:24%;
+       top:20%; 
 
   }
+  .galeria{
 
-	</style>
+        font-size: 500%;
+        width:70%;
+        height: 10%; 
+        font-family: dust;
+
+        text-align: left;
+        position: absolute;
+        left:24%;
+        top:8%;
+
+  }
+  #panel1{
+    width: 20%;
+    height: 80%;
+    position: absolute;
+    left:2.5%;
+    top:15%;
+  }
+  </style>
 </head>
 <body background= "/files/files/abs.jpg">
 	
@@ -119,6 +139,9 @@
     <br>
     <center><h1>Ingenieria Civil</h1></center>
 
+  </div>
+  <div class="galeria">
+   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp G &nbsp &nbsp &nbsp a &nbsp &nbsp &nbsp l &nbsp &nbsp &nbsp e &nbsp &nbsp &nbspr &nbsp &nbsp &nbspi &nbsp &nbsp &nbsp a
   </div>
   <div class="carrusel">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -186,6 +209,11 @@
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div><!-- /.carousel -->
     </div>
+    <div class="panel panel-default" id = "panel1">
+  <div class="panel-body">
+    Basic panel example
+  </div>
+</div>
 
 <script>
   function show(){
