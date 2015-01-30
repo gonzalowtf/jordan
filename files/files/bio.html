@@ -20,14 +20,15 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
     <script type="text/javascript" src = "files/files/bootbox.min.js"></script>
 	<title>Gustavo Jordan</title>
-	<style>
+</head>
+<style>
   @font-face{
       font-family: "bolder";
-      src:url(files/files/GreyscaleBasic/bold.ttf);
+      src:url(GreyscaleBasic/bold.ttf);
     }
     @font-face{
     font-family: "dust";
-    src:url(files/files/dustwest.ttf);
+    src:url(dustwest.ttf);
   }
 
   body{
@@ -86,12 +87,11 @@
     height: 90%;
   }
   </style>
-</head>
 <body background= "/files/files/abs.jpg">
-	
-	<div class="nav">
+    
+    <div class="nav">
     <br>
-	<nav class="navbar navbar-default">
+    <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -116,7 +116,7 @@
           </ul>
 
         </li>
-        <li><a href="/files/files/bio.html">Biografia <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="#">Biografia <span class="sr-only">(current)</span></a></li>
         <li><a href="#">Contacto</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Principales obras<span class="caret"></span></a>
@@ -145,77 +145,11 @@
 
   </div>
   <div class="galeria">
-   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp G &nbsp &nbsp &nbsp a &nbsp &nbsp &nbsp l &nbsp &nbsp &nbsp e &nbsp &nbsp &nbspr &nbsp &nbsp &nbspi &nbsp &nbsp &nbsp a
+    &nbsp &nbsp B &nbsp &nbsp &nbsp i &nbsp &nbsp &nbsp o &nbsp &nbsp &nbsp g &nbsp &nbsp &nbsp r &nbsp &nbsp &nbsp a &nbsp &nbsp &nbsp f &nbsp &nbsp &nbsp i &nbsp &nbsp &nbsp a
   </div>
-  <div class="carrusel">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="files/files/fondo1.jpg" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Use this space as a shown for your servicies</h1>
-              <p>Write some information about it here , don t care how long is it , the picture bellow is an scren shot of your product</p>
-              <p><a class="btn btn-lg btn-primary" role="button" onClick ="show()">Action1</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="files/files/fondo2.jpg" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-             <h1>Another slide ... for another service</h1>
-              <p>Write information about it here , don t care how long is it , the picture bellow is an scren shot of your product </p>
-              <p><a class="btn btn-lg btn-primary" role="button" onClick = "show()">Action2</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="files/files/fondo3.jpg" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another slide ... for another service</h1>
-              <p>Write some information about it here , don t care how long is it , the picture bellow is an scren shot of your product</p>
-              <p><a class="btn btn-lg btn-primary" role="button" onClick = "show()">Action3</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="files/files/fondo4.jpg" alt="Fourth slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another slide ... for another service</h1>
-              <p>Write some information about it here , don t care how long is it , the picture bellow is an scren shot of your product</p>
-              <p><a class="btn btn-lg btn-primary" role="button" onClick = "show()">Action4</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="files/files/fondo5.jpg" alt="Fifth slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another slide ... for another service</h1>
-              <p>Write some information about it here , don t care how long is it , the picture bellow is an scren shot of your product</p>
-              <p><a class="btn btn-lg btn-primary" role="button" onClick = "show()">Action5</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-    </div><!-- /.carousel -->
-    </div>
-    <div class="panel panel-default" id = "panel1">
+  <div class="panel panel-default" id = "panel1">
   <div class="panel-body">
-    &nbsp &nbsp<img src="files/files/viejo.jpg" id="viejo" alt="">
+    &nbsp &nbsp<img src="viejo.jpg" id="viejo" alt="">
     &nbsp &nbsp<span class="label label-default">Administracion de proyectos</span>
     &nbsp &nbsp &nbsp &nbsp<span class="label label-warning">control de proyectos</span>
     &nbsp &nbsp &nbsp &nbsp<span class="label label-primary">Uso avanzado de AutoCad</span>
@@ -227,6 +161,8 @@
 
   </div>
 </div>
+
+  
 
 <script>
   function show(){
@@ -244,6 +180,6 @@
   function prog(){
     bootbox.alert("Link to the Programmer´s  page"); 
   }
-</script>	
+</script>   
 </body>
 </html>
