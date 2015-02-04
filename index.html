@@ -22,7 +22,15 @@
     <script type="text/javascript" src = "files/files/bootbox.min.js"></script>
 	<title>Gustavo Jordan</title>
     <style>
+    @font-face{
 
+        font-family: "dustwest";
+        src: url(/files/files/dustwest.ttf) format("truetype");
+    }
+    @font-face{
+      font-family: "wired";
+      src:url(/files/files/wired.ttf) format("truetype");
+    }
     .navbar-wrapper{
                 
                 position: absolute;
@@ -32,13 +40,32 @@
                 z-index: 100;
 
     }
+    #myCarousel{
+      position: relative;
+      width: 100%;
+      height: 40%;
+
+    }
+    #j1{
+      background: black;
+      color:white;
+      font-family: dustwest;
+      font-size: 90%;
+    }
+    #j2{
+      background: orange;
+      color:blue;
+      font-family: wired;
+      
+
+    }
 
 
     </style>
 </head>
 
 	
-<body background = "/files/files/abs.jpg">
+<body background = "/files/files/fondaso.jpg">
     
     <div class="container">
         <div class="navbar-wrapper">
@@ -54,16 +81,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="#">GustavoJordan</a>
+                  <a class="navbar-brand" href="#"><strong>GustavoJordan</strong></a>
                 </div>
                 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav" id="center">
-                    <li><a href="#">Biografia <span class="sr-only">(current)</span></a></li>
+                    <li><a href="/files/files/bio.html">Biografia <span class="sr-only">(current)</span></a></li>
                     <li><a href="#">Contacto</a></li>
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Principales Obras <span class="caret"></span></a>
+                 
                       <ul class="dropdown-menu" role="menu">
                         <li><a href="#">Action</a></li>
                         <li><a href="#">Another action</a></li>
@@ -75,6 +103,15 @@
                       </ul>
                     </li>
                   </ul>
+                   <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class = "navbar-brand" ><strong>Ingenieria Civil</strong></a>
+                </div>
                   
                   </div><!-- /.navbar-collapse -->
               
@@ -102,7 +139,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="/files/files/fondo4.jpg" alt="Second slide">
+          <img src="/files/files/fondo2.jpg" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
              <h1>Another slide ... for another service</h1>
@@ -126,6 +163,22 @@
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div><!-- /.carousel -->
 
+    <div class="jumbotron" id="j1">
+        <h1><center>Sobre mí</center></h1>
+        <center><p>Hola ! mi nombre es gustavo y soy un ingeniero procedente de la ciudad de Tucuman<br>
+          me encanta mi profesion y lograr que mis proyectos se lleven a cabo<br>
+          he llevado a cabo y realizado varios proyectos para varias empresas y siempre estoy buscando <br>
+          desafios nuevos para poder agrandar mi experiencia como profesional </p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Más</a></p></center>
+    </div>
+    <div class="jumbotron" id="j2">
+        <h1><center>Sobre mí</center></h1>
+        <center><p>Hola ! mi nombre es gustavo y soy un ingeniero procedente de la ciudad de Tucuman<br>
+          me encanta mi profesion y lograr que mis proyectos se lleven a cabo<br>
+          he llevado a cabo y realizado varios proyectos para varias empresas y siempre estoy buscando <br>
+          desafios nuevos para poder agrandar mi experiencia como profesional </p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Más</a></p></center>
+    </div>
     </div>
 
     
