@@ -21,146 +21,78 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
     <script type="text/javascript" src = "files/files/bootbox.min.js"></script>
 	<title>Gustavo Jordan</title>
-	<style>
-  @font-face{
-      font-family: "bolder";
-      src:url(files/files/GreyscaleBasic/bold.ttf);
-    }
-    @font-face{
-    font-family: "dust";
-    src:url(files/files/dustwest.ttf);
-  }
+    <style>
 
-  body{
-    background-color: white;
+    .navbar-wrapper{
+                
+                position: absolute;
+
+                width: 85%;
+
+                z-index: 100;
+
     }
 
-  .header{
-    font-size: 40%;
-    font-family: bolder;
-    height:auto;
-    width: 20%;
-    position: absolute;
-    left:2.6%;    
-    color: white;
-  } 
-  
-  .nav{
-        position: absolute;
-        left:24%;
-        width: 70%;
-        height: 10%;
-        float: left;
 
-  }
-  .carrusel{
-        
-       width: 70%;
-       height:70%; 
-       position: absolute;
-       left:24%;
-       top:20%; 
-
-  }
-  .galeria{
-
-        font-size: 500%;
-        width:70%;
-        height: 10%; 
-        font-family: dust;
-
-        text-align: center;
-        position: absolute;
-        left:24%;
-        top:8%;
-
-  }
-  #panel1{
-    width: 20%;
-    height: 80%;
-    position: absolute;
-    left:2.5%;
-    top:20%;
-  }
-  #viejo{
-    width: 90%;
-    height: 90%;
-  }
-  </style>
+    </style>
 </head>
-<body background= "/files/files/abs.jpg">
+
 	
-	<div class="nav">
-    <br>
-	<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">GustavoJordan</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-            <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Seguime!<span class="caret"></span></a>
-           <ul class="dropdown-menu" role="menu">
-            <li><a href="#" onClick = "facebook()">Facebook</a></li>
-            <li><a href="#" onClick ="twitter()">Twitter</a></li>
-            <li><a href="#" onClick = "google +">Google +</a></li>
-          </ul>
-
-        </li>
-        <li><a href="/files/files/bio.html">Biografia <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Contacto</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Principales obras<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
+<body background = "/files/files/abs.jpg">
     
-        
-      </ul>
-      
-      
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-</div>
-<div class="header">
-    <br>
-    <center><h1>Ingenieria Civil</h1></center>
-
-  </div>
-  <div class="galeria">
-   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp G &nbsp &nbsp &nbsp a &nbsp &nbsp &nbsp l &nbsp &nbsp &nbsp e &nbsp &nbsp &nbspr &nbsp &nbsp &nbspi &nbsp &nbsp &nbsp a
-  </div>
-  <div class="carrusel">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="container">
+        <div class="navbar-wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-default navbar-static-top">
+              <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">GustavoJordan</a>
+                </div>
+                
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav" id="center">
+                    <li><a href="#">Biografia <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Principales Obras <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  
+                  </div><!-- /.navbar-collapse -->
+              
+              </div><!-- /.container-fluid -->
+            </nav>
+            </div>
+            </div>
+        </div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
       </ol>
       <div class="carousel-inner">
         <div class="item active">
-          <img src="files/files/fondo1.jpg" alt="First slide">
+          <img src="/files/files/fondo1.jpg" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Use this space as a shown for your servicies</h1>
@@ -170,7 +102,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="files/files/fondo2.jpg" alt="Second slide">
+          <img src="/files/files/fondo4.jpg" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
              <h1>Another slide ... for another service</h1>
@@ -179,28 +111,8 @@
             </div>
           </div>
         </div>
-        <div class="item">
-          <img src="files/files/fondo3.jpg" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another slide ... for another service</h1>
-              <p>Write some information about it here , don t care how long is it , the picture bellow is an scren shot of your product</p>
-              <p><a class="btn btn-lg btn-primary" role="button" onClick = "show()">Action3</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="files/files/fondo4.jpg" alt="Fourth slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another slide ... for another service</h1>
-              <p>Write some information about it here , don t care how long is it , the picture bellow is an scren shot of your product</p>
-              <p><a class="btn btn-lg btn-primary" role="button" onClick = "show()">Action4</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="files/files/fondo5.jpg" alt="Fifth slide">
+       <div class="item">
+          <img src="/files/files/fondo5.jpg" alt="Fifth slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Another slide ... for another service</h1>
@@ -213,38 +125,9 @@
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div><!-- /.carousel -->
+
     </div>
-    <div class="panel panel-default" id = "panel1">
-  <div class="panel-body">
-    &nbsp &nbsp<img src="files/files/viejo.jpg" id="viejo" alt="">
-    &nbsp &nbsp&nbsp &nbsp&nbsp&nbsp <span class="label label-default">Administracion de proyectos</span><br>
-    &nbsp &nbsp &nbsp &nbsp<span class="label label-warning">control de proyectos</span><br>
-    &nbsp &nbsp &nbsp &nbsp<span class="label label-primary">Uso avanzado de AutoCad</span><br>
-    &nbsp &nbsp &nbsp &nbsp<span class="label label-success">Experiencia en proyectos a corto plazo</span><br>
-    &nbsp &nbsp &nbsp &nbsp<span class="label label-info">Experiencia en proyectos a largo plazo</span><br>
-    &nbsp &nbsp &nbsp &nbsp<span class="label label-warning">Presentacion de licitaciones</span><br>
-    &nbsp &nbsp &nbsp &nbsp<span class="label label-danger">Control general de materiales</span><br>
-    &nbsp &nbsp &nbsp &nbsp<span class="label label-default">Control y contratacion de mano de obra</span><br>
 
-  </div>
-</div>
-
-<script>
-  function show(){
-    bootbox.alert("Button to an action !");
-  }
-  function facebook(){
-    bootbox.alert("Link to the Facebook´s page"); 
-  }
-  function twitter(){
-    bootbox.alert("Link to the Twitter´s page"); 
-  }
-  function google(){
-    bootbox.alert("Link to the Google+´s page"); 
-  }
-  function prog(){
-    bootbox.alert("Link to the Programmer´s  page"); 
-  }
-</script>	
+    
 </body>
 </html>
