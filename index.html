@@ -31,9 +31,14 @@
       font-family: "wired";
       src:url(/files/files/wired.ttf) format("truetype");
     }
+    @font-face{
+      font-family: "vergen";
+      src:url(/files/files/vergen.ttf) format("truetype");
+    }
     .navbar-wrapper{
                 
                 position: absolute;
+                
 
                 width: 85%;
 
@@ -53,12 +58,22 @@
       font-size: 90%;
     }
     #j2{
+      position: relative;
       background: orange;
       color:blue;
       font-family: wired;
       
 
     }
+    #j3{
+
+
+      position: relative;
+      background: green;
+      color : yellow;
+      font-family: vergen;
+    }
+
 
 
     </style>
@@ -68,9 +83,11 @@
 <body background = "/files/files/fondaso.jpg">
     
     <div class="container">
-        <div class="navbar-wrapper">
+       
         <div class="row">
             <div class="col-md-12">
+              
+                <div class="navbar-wrapper">
                 <nav class="navbar navbar-default navbar-static-top">
               <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -112,11 +129,13 @@
                   </button>
                   <a class = "navbar-brand" ><strong>Ingenieria Civil</strong></a>
                 </div>
-                  
+                   
                   </div><!-- /.navbar-collapse -->
+
               
               </div><!-- /.container-fluid -->
             </nav>
+
             </div>
             </div>
         </div>
@@ -163,7 +182,7 @@
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div><!-- /.carousel -->
 
-    <div class="jumbotron" id="j1">
+    <div class = "jumbotron" id="j1">
         <h1><center>Sobre mí</center></h1>
         <center><p>Hola ! mi nombre es gustavo y soy un ingeniero procedente de la ciudad de Tucuman<br>
           me encanta mi profesion y lograr que mis proyectos se lleven a cabo<br>
@@ -171,7 +190,15 @@
           desafios nuevos para poder agrandar mi experiencia como profesional </p>
         <p><a class="btn btn-primary btn-lg" href="#" role="button">Más</a></p></center>
     </div>
-    <div class="jumbotron" id="j2">
+    <div class = "jumbotron" id="j2">
+        <h1><center>Sobre mí</center></h1>
+        <center><p>Hola ! mi nombre es gustavo y soy un ingeniero procedente de la ciudad de Tucuman<br>
+          me encanta mi profesion y lograr que mis proyectos se lleven a cabo<br>
+          he llevado a cabo y realizado varios proyectos para varias empresas y siempre estoy buscando <br>
+          desafios nuevos para poder agrandar mi experiencia como profesional </p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Más</a></p></center>
+    </div>
+    <div class = "jumbotron" id="j3">
         <h1><center>Sobre mí</center></h1>
         <center><p>Hola ! mi nombre es gustavo y soy un ingeniero procedente de la ciudad de Tucuman<br>
           me encanta mi profesion y lograr que mis proyectos se lleven a cabo<br>
