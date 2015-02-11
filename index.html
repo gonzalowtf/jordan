@@ -35,44 +35,23 @@
       font-family: "vergen";
       src:url(/files/files/vergen.ttf) format("truetype");
     }
-    .navbar-wrapper{
-                
-                position: absolute;
-                
+    
+    
 
-                width: 97.5%;
 
-                z-index: 100;
-
-    }
-    #myCarousel{
-      position: absolute;
-      width: 85%;
-      height: 104%;
-
-    }
     #j1{
-      position: absolute;
-      height: 60%;
-      width: 85%;
-      top:101%;
-      background: black;
-      color:white;
-      font-family: dustwest;
-      font-size: 90%;
       
+      background: black;
+      font-family: dustwest;
+      color:white;
+
+
     }
     #j2{
-      position: absolute;
-      height: 40%;
-      width: 85%;
-      top:150%;
       background: orange;
-      color:blue;
       font-family: wired;
-      
+      color : blue;
     }
-
     </style>
 </head>
 
@@ -81,8 +60,9 @@
     
     <div class="container">
        
-        <div class="row">
-            <div class="col-md-12">
+        <div class="row-fluid">
+          <div class="span12">
+            
               
                 <div class="navbar-wrapper">
                 <nav class="navbar navbar-default navbar-static-top">
@@ -131,11 +111,13 @@
 
               </div>
               </div><!-- /.container-fluid -->
+
             </nav>
 
-           
-            </div>
-        </div>
+         </div>
+                             
+        <div class="row-fluid">
+          <div class="span12">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -178,24 +160,52 @@
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div><!-- /.carousel -->
+         </div>
+        </div>  
+          
+         <div class="row-fluid">
+           <div class="span12">
+             <div class = "jumbotron" id="j1">
+                  <h1><center>Sobre mí</center></h1>
+                  <center><p>Hola ! mi nombre es gustavo y soy un ingeniero procedente de la ciudad de Tucuman<br>
+                    me encanta mi profesion y lograr que mis proyectos se lleven a cabo<br>
+                    he llevado a cabo y realizado varios proyectos para varias empresas y siempre estoy buscando <br>
+                    desafios nuevos para poder agrandar mi experiencia como profesional </p>
+                  <p><a class="btn btn-primary btn-lg" href="/files/files/bio.html" role="button">Ver Biografia</a></p></center>
+            </div>
+          </div>
+         </div>
+         <div class="row-fluid">
+           <div class="span12">
+                <div class = "jumbotron" id="j2">
+                    <h1><center>Encontrame/Seguime</center></h1>
+                    <center><p> Estoy en todas las redes sociales mas importantes , encontrame o contactame por mi mail o telefono : </p>
+                    <p><a class="btn btn-primary btn-lg" href="#" role="button">Contactar</a></p></center>
+                
+                <div class="row-fluid">
+                  <div class="span12">
+                    <div class="col-md-4">
+                    <img src = "/files/files/twitter.ico" href="https://www.facebook.com/gustavo.jordan.798?fref=ts">
+                    </div>
+                    <div class="col-md-4">
+                    <img src = "/files/files/facebook.ico" href="https://www.facebook.com/gustavo.jordan.798?fref=ts">
+                    </div>
+                    <div class="col-md-4">
+                    <img src = "/files/files/whatsapp.ico" href="https://www.facebook.com/gustavo.jordan.798?fref=ts">
+                    </div>
+                  </div>
+                </div>
+                <br><br>
+              </div>
+                
+          </div>
+         </div>
+    </div>
+ </div>         
+</div>
 
-    <div class = "jumbotron" id="j1">
-        <h1><center>Sobre mí</center></h1>
-        <center><p>Hola ! mi nombre es gustavo y soy un ingeniero procedente de la ciudad de Tucuman<br>
-          me encanta mi profesion y lograr que mis proyectos se lleven a cabo<br>
-          he llevado a cabo y realizado varios proyectos para varias empresas y siempre estoy buscando <br>
-          desafios nuevos para poder agrandar mi experiencia como profesional </p>
-        <p><a class="btn btn-primary btn-lg" href="/files/files/bio.html" role="button">Ver Biografia</a></p></center>
-    </div>
-    <div class = "jumbotron" id="j2">
-        <h1><center>Encontrame/Seguime</center></h1>
-        <center><p> Estoy en todas las redes sociales mas importantes , encontrame o contactame por mi mail o telefono : </p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Contactar</a></p></center>
-    </div>
-     
-    
-    </div>
-
+           
+       
     
 </body>
 </html>
