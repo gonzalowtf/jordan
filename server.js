@@ -21,6 +21,42 @@ app.use('/files/files', express.static(__dirname + '/files/files'));
           //res.end("hello world!");    
       
       });
+ var nodemailer = require('nodemailer');     //sending mail
+ var transporter =nodemailer.createTransport({   //SMTP',
+        service : 'Gmail',
+        auth:{
+              user: 'gonzalowtf@gmail.com',
+              pass: 'aereomodelismo12'
+
+              }
+ }); 
+ var v = '<strong>hi</strong>';
+ v=v+'<img src= "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ2lHr02wc7xuBx9miriHXSKQLbIo7yzlJmZRxn6itXpFHOQOq-NWPsEFk">'  
+ 
+ var mailOptions = {
+        from:'gustavojordan <gonzalowtf@gmail.com>',
+        to:'gonzalowtf@gmail.com',
+        subject: 'mail test',
+        text :'working',
+        html : v
+
+
+ }
+
+ app.get('/sendMail',function(req,res){
+
+    transporter.sendMail(mailOptions, function(error, info){
+    if(error){
+        console.log(error);
+    }else{
+        console.log('Message sent: ' + info.response);
+    }
+      });
+
+
+
+});
+
       
  
      
