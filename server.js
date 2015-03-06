@@ -4,7 +4,8 @@ var express = require("express"),
     app = express(),
     http    = require("http"), //m http module
     server  = http.createServer(app),
-    port = process.env.PORT || 8000
+    port = process.env.PORT || 8000,
+    io = require('socket.io').listen(server);
 
 app.configure(function () {
   app.use(express.bodyParser()); 
@@ -34,11 +35,13 @@ app.use('/files/files', express.static(__dirname + '/files/files'));
  v=v+'<img src= "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ2lHr02wc7xuBx9miriHXSKQLbIo7yzlJmZRxn6itXpFHOQOq-NWPsEFk">'  
  
  var mailOptions = {
-        from:'gustavojordan <gonzalowtf@gmail.com>',
+        from:'Gustavo Jordan <gustavojordan.com>',
         to:'gonzalowtf@gmail.com',
-        subject: 'mail test',
+        subject: 'Mensaje de contacto',
         text :'working',
-        html : v
+        html: v
+
+        
 
 
  }
@@ -53,7 +56,7 @@ app.use('/files/files', express.static(__dirname + '/files/files'));
     }
       });
 
-
+console.log(nombre);
 
 });
 
@@ -72,3 +75,28 @@ server.listen(port, function(err) {
 }
     
 });         
+
+
+io.sockets.on("connection",function(socket){
+
+// for the online users ta the moment od connection
+  socket.on("new-m",function(data){
+
+       if(data.vas){
+        
+        console.log("sent");
+        nombre=data.name
+        apellido=data.surname
+        mail=data.mail
+        mensaje=data.messenge
+       }
+       else{
+        console.log("not sent");
+        
+       }
+
+  });
+    //"send-mesage" and "new message" are the functions on index and works everywhere
+    
+});
+

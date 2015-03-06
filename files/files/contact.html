@@ -8,7 +8,10 @@
 	  <script src ="https://code.jquery.com/jquery.js"></script>
 	  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <meta name = "viewport" content = "width=device-with , initial-scale =1.0"> 
-
+    <link rel="stylesheet" href="/files/files/frame/css/bootstrap.css">
+    <script src = "/files/files/frame/js/bootstrap.js"></script>
+    <script src ="https://code.jquery.com/jquery.js"></script>
+    
     <!-- Optional theme -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
@@ -143,22 +146,24 @@ b{
                   <div class="col-md-6">
                     <h2></h2>
                     <div class="col-md-11"></br></br>
+                      <form id = "action" class ="input-group" style ="text-align:center; margin:0 auto;">
                       <div class="input-group input-group-lg">
   <span class="input-group-addon" id="sizing-addon1">N</span>
-                      <input type="text" class="form-control" placeholder="Tu Nombre..." aria-describedby="basic-addon2"></div>
+                      <input id = "name" type="text" class="form-control" placeholder="Tu Nombre..." aria-describedby="basic-addon2"></div>
                   </br></br></br>
                       <div class="input-group input-group-lg">
   <span class="input-group-addon" id="sizing-addon1">A</span>
-                      <input type="text" class="form-control" placeholder="Tu Apellido..." aria-describedby="basic-addon2"></div>
+                      <input id = "surname" type="text" class="form-control" placeholder="Tu Apellido..." aria-describedby="basic-addon2"></div>
                   </br></br></br>
                       <div class="input-group input-group-lg">
   <span class="input-group-addon" id="sizing-addon1">M</span>
-                      <input type="text" class="form-control" placeholder="Tu Mail..." aria-describedby="basic-addon2"></div>
+                      <input id = "mail" type="text" class="form-control" placeholder="Tu Mail..." aria-describedby="basic-addon2"></div>
                   </br></br></br>
                   <div class="input-group input-group-lg">
-                        <textarea class = "form-control" cols = "40" rows = "80" placeholder = "tu consulta" rows = "10" columns = "20"></textarea></div>
+                        <textarea id = "sugg" class = "form-control" cols = "40" rows = "80" placeholder = "tu consulta" rows = "10" columns = "20"></textarea></div>
                   </br></br></br></br></br></br></br></br></br>
-                  <center><button type="button" class="btn btn-primary btn-lg" onClick = "location.href='/sendMail'">Enviar a jordares@gmail.com</button></center>
+                  <center><button type="submit" class="btn btn-primary btn-lg" >Enviar a jordares@gmail.com</button></center>
+                  </form>
                   </div>
 
                       </div>
@@ -227,6 +232,45 @@ b{
 
 
         }
+        
+    </script>
+    <script>
+
+        jQuery(function($){
+
+                var socket = io.connect();
+                var $name = $('#name');
+                var $surname = $('#surname');
+                var $mail = $('#mail');
+                var $messege = $('#sugg');
+                var $action = $('#action');
+
+                console.log("llego");
+
+                $action.submit(function(e){
+
+                      e.preventDefault();
+                      socket.emit("new-m",{name: $name.val(),
+                        surname: $surname.val(),
+                        mail: $mail.val(),
+                        messege: $messege.val(),
+                        vas: true
+
+                      });
+
+                      $name.val('');
+                      $surname.val('');
+                      $mail.val('');
+                      $messege.val('');
+
+                        console.log("llego boton");
+                        location = "/sendMail";
+                        bootbox.alert("Mensaje enviado !");
+
+                   });
+                   });
+
+
     </script>
 </body>
 </html>    
