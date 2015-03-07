@@ -6,6 +6,7 @@ var express = require("express"),
     server  = http.createServer(app),
     port = process.env.PORT || 8000,
     io = require('socket.io').listen(server);
+var nombre,apellido,mail,mensaje,numero;    
 
 app.configure(function () {
   app.use(express.bodyParser()); 
@@ -22,43 +23,7 @@ app.use('/files/files', express.static(__dirname + '/files/files'));
           //res.end("hello world!");    
       
       });
- var nodemailer = require('nodemailer');     //sending mail
- var transporter =nodemailer.createTransport({   //SMTP',
-        service : 'Gmail',
-        auth:{
-              user: 'gonzalowtf@gmail.com',
-              pass: 'aereomodelismo12'
-
-              }
- }); 
- var v = '<strong>hi</strong>';
- v=v+'<img src= "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ2lHr02wc7xuBx9miriHXSKQLbIo7yzlJmZRxn6itXpFHOQOq-NWPsEFk">'  
  
- var mailOptions = {
-        from:'Gustavo Jordan <gustavojordan.com>',
-        to:'gonzalowtf@gmail.com',
-        subject: 'Mensaje de contacto',
-        text :'working',
-        html: v
-
-        
-
-
- }
-
- app.get('/sendMail',function(req,res){
-
-    transporter.sendMail(mailOptions, function(error, info){
-    if(error){
-        console.log(error);
-    }else{
-        console.log('Message sent: ' + info.response);
-    }
-      });
-
-console.log(nombre);
-
-});
 
       
  
@@ -88,7 +53,8 @@ io.sockets.on("connection",function(socket){
         nombre=data.name
         apellido=data.surname
         mail=data.mail
-        mensaje=data.messenge
+        numero=data.number
+        mensaje=data.messege
        }
        else{
         console.log("not sent");
@@ -98,5 +64,43 @@ io.sockets.on("connection",function(socket){
   });
     //"send-mesage" and "new message" are the functions on index and works everywhere
     
+});
+
+var nodemailer = require('nodemailer');     //sending mail
+ var transporter =nodemailer.createTransport({   //SMTP',
+        service : 'Gmail',
+        auth:{
+              user: 'gonzalowtf@gmail.com',
+              pass: 'aereomodelismo12'
+
+              }
+ }); 
+ //var v = '<strong>hi</strong>';
+ //v=v+'<img src= "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ2lHr02wc7xuBx9miriHXSKQLbIo7yzlJmZRxn6itXpFHOQOq-NWPsEFk">'  
+ 
+ 
+ app.get('/sendMail',function(req,res){
+        var mailOptions = {
+            from:'gustavojordan.com',
+            to:'gonzalowtf@gmail.com',
+            subject: 'Mensaje de contacto',
+            html : '<b><strong>'+nombre+' '+apellido+'</b></strong><br><br><br> escribió en tu pagina y quiere contactarse con vos: '+mensaje+'<br><br><br><br> mail de contacto :'+mail+'<br><br> numero :'+numero            
+
+            
+
+
+     }
+
+
+    transporter.sendMail(mailOptions, function(error, info){
+    if(error){
+        console.log(error);
+    }else{
+        console.log('Message sent: ' + info.response);
+    }
+      });
+
+//console.log(nombre);
+
 });
 

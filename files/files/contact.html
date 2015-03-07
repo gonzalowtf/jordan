@@ -22,7 +22,7 @@
  
     <!-- importando angular js -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
-    <script type="text/javascript" src = "bootbox.min.js"></script>
+    <script type="text/javascript" src = "/files/files/bootbox.min.js"></script>
 	<title>Gustavo Jordan-Contacto</title>
     <style>
     @font-face{
@@ -157,7 +157,10 @@ b{
                   </br></br></br>
                       <div class="input-group input-group-lg">
   <span class="input-group-addon" id="sizing-addon1">M</span>
-                      <input id = "mail" type="text" class="form-control" placeholder="Tu Mail..." aria-describedby="basic-addon2"></div>
+                      <input id = "mail" type="text" class="form-control" placeholder="Tu Mail..." aria-describedby="basic-addon2"></div></br></br></br>
+                      <div class="input-group input-group-lg">
+  <span class="input-group-addon" id="sizing-addon1">N°</span>
+                      <input id = "number" type="text" class="form-control" placeholder="Tu numero de telefono..." aria-describedby="basic-addon2"></div>
                   </br></br></br>
                   <div class="input-group input-group-lg">
                         <textarea id = "sugg" class = "form-control" cols = "40" rows = "80" placeholder = "tu consulta" rows = "10" columns = "20"></textarea></div>
@@ -174,7 +177,7 @@ b{
                           
                     <div class="row">
                       <div class="col-md-12">
-                        <center><a href= "https://www.facebook.com/gustavo.jordan.798?fref=ts"><img id = "fa" src="/files/files/facebook.ico" alt=""></a></center>
+                        <center><a href= "https://www.facebook.com/gustavo.jordan.798?fref=ts" target="_blank"><img id = "fa" src="/files/files/facebook.ico" alt=""></a></center>
                       </div>
                     </div>
                     <div class="row">
@@ -184,7 +187,7 @@ b{
                     </div><br><br><br>
                      <div class="row">
                       <div class="col-md-12">
-                        <center><a href= "https://twitter.com/gus_jordan"><img id = "tw" src="/files/files/twitter.ico" alt=""></a></center>
+                        <center><a href= "https://twitter.com/gus_jordan" target="_blank"><img id = "tw" src="/files/files/twitter.ico" alt=""></a></center>
                       </div>
                     </div>
                     <div class="row">
@@ -205,7 +208,7 @@ b{
                     <br><br><br>
                      <div class="row">
                       <div class="col-md-12">
-                        <center><a href= ""><img id= "goo" src="/files/files/google.ico" alt=""></a></center>
+                        <center><a href= "" target="_blank"><img id= "goo" src="/files/files/google.ico" alt=""></a></center>
                       </div>
                     </div>
                     <div class="row">
@@ -244,6 +247,7 @@ b{
                 var $mail = $('#mail');
                 var $messege = $('#sugg');
                 var $action = $('#action');
+                var $number = $('#number');
 
                 console.log("llego");
 
@@ -253,6 +257,7 @@ b{
                       socket.emit("new-m",{name: $name.val(),
                         surname: $surname.val(),
                         mail: $mail.val(),
+                        number: $number.val(),
                         messege: $messege.val(),
                         vas: true
 
@@ -260,11 +265,12 @@ b{
 
                       $name.val('');
                       $surname.val('');
+                      $number.val('');
                       $mail.val('');
                       $messege.val('');
 
                         console.log("llego boton");
-                        location = "/sendMail";
+                        location = "/files/files/";
                         bootbox.alert("Mensaje enviado !");
 
                    });
@@ -272,5 +278,7 @@ b{
 
 
     </script>
+    <script type="text/javascript" src = "/files/files/bootbox.min.js"></script>
+
 </body>
 </html>    
