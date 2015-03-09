@@ -8,11 +8,11 @@ var express = require("express"),
     io = require('socket.io').listen(server);
 var nombre,apellido,mail,mensaje,numero;    
 
-app.configure(function () {
+/*app.configure(function () {
   app.use(express.bodyParser()); 
   app.use(express.methodOverride());
   app.use(app.router); 
-});
+}); */ 
 
 app.use('/files/files', express.static(__dirname + '/files/files'));
 
@@ -55,6 +55,7 @@ io.sockets.on("connection",function(socket){
         mail=data.mail
         numero=data.number
         mensaje=data.messege
+        
        }
        else{
         console.log("not sent");
@@ -79,7 +80,7 @@ var nodemailer = require('nodemailer');     //sending mail
  //v=v+'<img src= "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ2lHr02wc7xuBx9miriHXSKQLbIo7yzlJmZRxn6itXpFHOQOq-NWPsEFk">'  
  
  
- app.get('/sendMail',function(req,res){
+ app.get('/contact2',function(req,res){
         var mailOptions = {
             from:'gustavojordan.com',
             to:'gonzalowtf@gmail.com',
