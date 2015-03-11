@@ -83,9 +83,9 @@ var nodemailer = require('nodemailer');     //sending mail
  app.get('/contact2',function(req,res){
         var mailOptions = {
             from:'gustavojordan.com',
-            to:'gonzalowtf@gmail.com',
-            subject: 'Mensaje de contacto',
-            html : '<b><strong>'+nombre+' '+apellido+'</b></strong><br><br><br> escribió en tu pagina y quiere contactarse con vos: '+mensaje+'<br><br><br><br> mail de contacto :'+mail+'<br><br> numero :'+numero            
+            to:'jordares@gmail.com',
+            subject: 'Mensaje de contacto <gustavojordan.com>',
+            html : '<b><strong>'+nombre+' '+apellido+'</b></strong><br><br><br> escribió en tu pagina y quiere contactarse con vos:<br><br> '+mensaje+'<br><br><br><br> mail de contacto :'+mail+'<br><br> numero :'+numero            
 
             
 
